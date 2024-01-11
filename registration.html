@@ -6,6 +6,11 @@
     <title>InvestEase Hub Registration</title>
     <style>
         /* Your existing styles here */
+        
+        .registration-container {
+            text-align: center;
+            padding: 20px;
+        }
 
         .google-btn {
             background-color: #4285f4;
@@ -27,9 +32,9 @@
         <h1>InvestEase Hub Registration</h1>
         
         <!-- Google Sign-In button with your client ID -->
-        <div class="g-signin2" data-onsuccess="onSignIn" data-clientid="399711398368-93fa3pqhv4egqebbrqremaeipj65c2j8.apps.googleusercontent.com"></div>
+        <div class="g-signin2" data-onsuccess="onSignIn" data-clientid="YOUR_CLIENT_ID"></div>
 
-        <form action="registration.html" method="post" id="registrationForm">
+        <form action="dashboard.html" method="post" id="registrationForm">
             <input type="text" name="fullname" placeholder="Full Name" required>
             <input type="email" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>
@@ -40,14 +45,8 @@
         <!-- Google Sign-In script -->
         <script>
             function onSignIn(googleUser) {
-                // Handle the Google Sign-In process and redirect to the dashboard or homepage.
                 var profile = googleUser.getBasicProfile();
-                console.log('ID: ' + profile.getId()); // You can use this ID to uniquely identify the user.
-                console.log('Name: ' + profile.getName());
-                console.log('Email: ' + profile.getEmail());
-
-                // Redirect to the dashboard or homepage after successful Google Sign-In.
-                window.location.href = "dashboard.html"; // Replace with your actual dashboard or homepage URL.
+                window.location.href = profile.getName().toLowerCase() + '.html';
             }
         </script>
 

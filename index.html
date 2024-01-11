@@ -79,21 +79,14 @@
         </div>
 
         <!-- Dynamic registration button -->
-        <button class="register-btn" id="registerButton" onclick="redirectToProfile()">Register</button>
+        <button class="register-btn" id="registerButton" onclick="redirectToRegistration()">Register</button>
 
         <!-- Add more dashboard content and features here -->
 
         <script>
-            // Function to dynamically set the register button based on the user's Google account
-            function redirectToProfile() {
-                var profileName = getProfileName(); // Replace with your function to fetch the user's first name
-                window.location.href = profileName ? profileName.toLowerCase() + '.html' : 'registration.html';
-            }
-
-            // Function to simulate fetching the user's first name (replace with actual logic)
-            function getProfileName() {
-                // For demonstration purposes, using a hardcoded name
-                return 'handedaksh';
+            // Function to redirect to the registration page
+            function redirectToRegistration() {
+                window.location.href = 'registration.html';
             }
         </script>
     </div>

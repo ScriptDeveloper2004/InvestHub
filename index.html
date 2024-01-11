@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvestEase Hub Dashboard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .dashboard-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        p {
+            color: #666666;
+        }
+
+        .navigation {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #333333;
+            padding: 8px;
+            border-radius: 4px;
+            background-color: #f2f2f2;
+            transition: background-color 0.3s;
+        }
+
+        .navigation a:hover {
+            background-color: #d9d9d9;
+        }
+
+        .register-btn {
+            margin-top: 20px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4285f4;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Welcome to InvestEase Hub</h1>
+        <p>Your financial journey starts here. Explore the possibilities!</p>
+
+        <!-- Navigation links -->
+        <div class="navigation">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="about.html">About Us</a>
+            <a href="donate.html">Donate</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="cookies.html">Cookies</a>
+            <a href="economic.html">Economic Graph</a>
+        </div>
+
+        <!-- Dynamic registration button -->
+        <button class="register-btn" id="registerButton" onclick="redirectToProfile()">Register</button>
+
+        <!-- Add more dashboard content and features here -->
+
+        <script>
+            // Function to dynamically set the register button based on the user's Google account
+            function redirectToProfile() {
+                var profileName = getProfileName(); // Replace with your function to fetch the user's first name
+                window.location.href = profileName ? profileName.toLowerCase() + '.html' : 'registration.html';
+            }
+
+            // Function to simulate fetching the user's first name (replace with actual logic)
+            function getProfileName() {
+                // For demonstration purposes, using a hardcoded name
+                return 'handedaksh';
+            }
+        </script>
+    </div>
+</body>
+</html>
